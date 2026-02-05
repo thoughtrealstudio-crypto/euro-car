@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Serwisowe | EURO-TECH Wolbrom</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="main-nav scrolled">
+        <div class="nav-container container">
+            <div class="logo-area">
+                <span class="logo-tech">EURO-TECH</span>
+                <span class="logo-sub">WOLBROM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="uslugi.html" class="active">USŁUGI</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <span class="tagline">FULL SERVICE</span>
+            <h1>ZAKRES PRAC</h1>
+        </div>
+    </header>
+
+    <main class="py-100">
+        <div class="container">
+            <div class="services-grid">
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#MECHANIKA</div>
+                    <h3>GŁÓWNE NAPRAWY</h3>
+                    <p>Serwis rozrządów, sprzęgieł, układów hamulcowych i zawieszenia. Specjalistyczne narzędzia
+                        dedykowane dla marek niemieckich i francuskich.</p>
+                </div>
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#DIAGNOSTYKA</div>
+                    <h3>SYSTEMY ELEKTRONICZNE</h3>
+                    <p>Zaawansowane kodowanie VAG-COM/VCDS, adaptacje skrzyń automatycznych, diagnostyka błędów i
+                        weryfikacja parametrów live-data.</p>
+                </div>
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#WULKANIZACJA</div>
+                    <h3>OPONY I FELGI</h3>
+                    <p>Serwis opon do 24 cali, obsługa systemów TPMS, komputerowe wyważanie kół i prostowanie felg po
+                        uszkodzeniach mechanicznych.</p>
+                </div>
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#KLIMATYZACJA</div>
+                    <h3>TERMO-SYSTEMY</h3>
+                    <p>Pełny serwis klimatyzacji (stary i nowy czynnik), ozonowanie wnętrza oraz wymiana parowników i
+                        kompresorów.</p>
+                </div>
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#PRZEGLĄDY</div>
+                    <h3>SERWIS OLEJOWY</h3>
+                    <p>Wymiana płynów eksploatacyjnych zgodnie ze specyfikacją producenta (LongLife), kasowanie
+                        inspekcji serwisowych.</p>
+                </div>
+
+                <div class="s-card reveal">
+                    <div class="f-icon">#HAMULCE</div>
+                    <h3>PERFORMANCE</h3>
+                    <p>Montaż zestawów hamulcowych premium oraz regeneracja zacisków. Płukanie układów pod ciśnieniem.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="brand-focus">
+        <div class="container">
+            <p>ZAUFAJ DOŚWIADCZENIU. STOSUJEMY CZĘŚCI:</p>
+            <div class="brand-logos">
+                <span>BOSCH</span>
+                <span>ATE</span>
+                <span>LEMFÖRDER</span>
+                <span>SACHS</span>
+                <span>CASTROL</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 EURO-TECH WOLBROM // PRECISION AUTOMOTIVE</p>
+                <a href="kontakt.html" class="cta-line">UMÓW TERMIN</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

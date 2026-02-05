@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | EURO-TECH Wolbrom</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="main-nav scrolled">
+        <div class="nav-container container">
+            <div class="logo-area">
+                <span class="logo-tech">EURO-TECH</span>
+                <span class="logo-sub">WOLBROM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="uslugi.html">USŁUGI</a></li>
+                <li><a href="kontakt.html" class="active">KONTAKT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header contact-header">
+        <div class="container reveal">
+            <span class="tagline">GET IN TOUCH</span>
+            <h1>KONTAKT</h1>
+        </div>
+    </header>
+
+    <main class="py-100">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-details reveal">
+                    <div class="detail-item">
+                        <span class="f-icon">#LOKALIZACJA</span>
+                        <h3>ADRES SERWISU</h3>
+                        <p>ul. Miechowska 42<br>32-340 Wolbrom</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="f-icon">#REZERWACJA</span>
+                        <h3>TELEFON</h3>
+                        <p class="neon-text">+48 123 456 789</p>
+                        <p class="small-info">Zadzwoń, aby ustalić termin wizyty.</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="f-icon">#OPERACJE</span>
+                        <h3>GODZINY PRACY</h3>
+                        <div class="hours-row">
+                            <span>PONIEDZIAŁEK - PIĄTEK:</span>
+                            <span>08:00 - 17:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>SOBOTA:</span>
+                            <span>08:00 - 13:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-area reveal">
+                    <form id="techContactForm" class="cyber-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="IMIĘ I NAZWISKO" required>
+                            <input type="tel" placeholder="NUMER TELEFONU" required>
+                        </div>
+                        <input type="text" placeholder="MARKA I MODEL POJAZDU">
+                        <textarea placeholder="OPIS USTERKI LUB ZAKRES PRAC" rows="5" required></textarea>
+                        <button type="submit" class="btn-neon">WYŚLIJ ZAPYTANIE</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="map-section reveal">
+        <div class="map-overlay-text">ZNAJDŹ NAS</div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10189.761806346766!2d19.7547196!3d50.3846669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47171765859d997d%3A0x6e26710b749d63c5!2sWolbrom!5e0!3m2!1spl!2spl!4v1700000000000"
+            class="google-map" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 EURO-TECH WOLBROM // PRECISION AUTOMOTIVE</p>
+                <div class="status">
+                    <span class="dot"></span> SERWIS ONLINE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.getElementById('techContactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('SYSTEM: WIADOMOŚĆ WYSŁANA POPRAWNIE.');
+        });
+    </script>
+</body>
+
+</html>
